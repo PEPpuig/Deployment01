@@ -19,7 +19,7 @@ else:
     
 #Intervalos de muestreo, definidos para que los resultados se puedan apreciar correctamente
 INTERVAL = 0.1
-THROUGHPUT_INTERVAL = 0.15
+THROUGHPUT_INTERVAL = 0.2
 
 start_time = time.time()
 
@@ -62,7 +62,7 @@ while True:
             if prev_tokens > 0:
                 throughput_total = (tokens_total - prev_tokens) / elapsed + prev_throughput
                 throughput = (throughput_total)/iteration
-                prev_tokens = tokens_total
+            prev_tokens = tokens_total
             prev_time = current_time
             prev_throughput = throughput_total
             iteration = iteration +1
